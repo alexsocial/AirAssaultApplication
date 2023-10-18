@@ -46,6 +46,10 @@ import {Phase1Screen} from './AirAssaultHome.js';
 import {Phase2Screen} from './AirAssaultHome.js';
 import {PathfinderScreen} from './PathfinderHome.js';
 import {RangerScreen} from './RangerHome.js';
+import {RappelMasterScreen} from './RappelMasterHome.js';
+import {FriesSpiesScreen} from './FriesSpiesHome.js';
+import {CasMasterScreen} from './CasMasterHome.js';
+import {CombatantsScreen} from './CombatantsHome.js';
 //import {TestScreen} from './AirAssaultHome.js';
 
 //version output
@@ -188,6 +192,14 @@ function CustomNavigationBar({ navigation, back, route, isDarkMode, toggleDarkMo
           <Menu.Item onPress={() => { navigation.navigate('Pathfinder Program'); closeMenu(); }} title="Pathfinder" />
           <Divider></Divider>
           <Menu.Item onPress={() => { navigation.navigate('Ranger Program'); closeMenu(); }} title="Ranger" />
+          <Divider style= {{backgroundColor: "#ffcc01", height: 3}}></Divider>
+          <Menu.Item onPress={() => { navigation.navigate('Rappel Master Program'); closeMenu(); }} title="Rappel Master" />
+          <Divider style= {{backgroundColor: "#ffcc01", height: 3}}></Divider>
+          <Menu.Item onPress={() => { navigation.navigate('Fries Spies Program'); closeMenu(); }} title="Fries/Spies" />
+          <Divider style= {{backgroundColor: "#ffcc01", height: 3}}></Divider>
+          <Menu.Item onPress={() => { navigation.navigate('Cas Master Program'); closeMenu(); }} title="Cas Master" />
+          <Divider style= {{backgroundColor: "#ffcc01", height: 3}}></Divider>
+          <Menu.Item onPress={() => { navigation.navigate('Combatants Program'); closeMenu(); }} title="Combatants" />
           <Divider style= {{backgroundColor: "#ffcc01", height: 3, marginBottom: -10}}></Divider>
         </Menu>}
       </View>
@@ -284,6 +296,90 @@ function CustomNavigationBar({ navigation, back, route, isDarkMode, toggleDarkMo
           resizeMode:"contain"
           }}/>
       </TouchableRipple>}
+      {screen == "Rappel Master Program" && <TouchableRipple
+        onPress={() => navigation.navigate('Home')}
+        style={{
+          height: 75,
+          backgroundColor: "#221f20",
+          borderColor: "#221f20",
+          justifyContent: "flex-end",
+          borderRadius: 0,
+          borderBottomWidth: 32,
+          borderBottomLeftRadius: 32,
+          borderBottomRightRadius: 32,
+        }}>
+        <Image source={require("./assets/RappelMasterClear.png")} style={{
+          marginLeft: 10,
+          marginRight: 10,
+          marginBottom: -20,
+          width: 100,
+          height: 45,
+          resizeMode:"contain"
+          }}/>
+      </TouchableRipple>}
+      {screen == "Fries Spies Program" && <TouchableRipple
+        onPress={() => navigation.navigate('Home')}
+        style={{
+          height: 75,
+          backgroundColor: "#221f20",
+          borderColor: "#221f20",
+          justifyContent: "flex-end",
+          borderRadius: 0,
+          borderBottomWidth: 32,
+          borderBottomLeftRadius: 32,
+          borderBottomRightRadius: 32,
+        }}>
+        <Image source={require("./assets/RappelMasterClear.png")} style={{
+          marginLeft: 10,
+          marginRight: 10,
+          marginBottom: -20,
+          width: 100,
+          height: 45,
+          resizeMode:"contain"
+          }}/>
+      </TouchableRipple>}
+      {screen == "Cas Master Program" && <TouchableRipple
+        onPress={() => navigation.navigate('Home')}
+        style={{
+          height: 75,
+          backgroundColor: "#221f20",
+          borderColor: "#221f20",
+          justifyContent: "flex-end",
+          borderRadius: 0,
+          borderBottomWidth: 32,
+          borderBottomLeftRadius: 32,
+          borderBottomRightRadius: 32,
+        }}>
+        <Image source={require("./assets/RappelMasterClear.png")} style={{
+          marginLeft: 10,
+          marginRight: 10,
+          marginBottom: -20,
+          width: 100,
+          height: 45,
+          resizeMode:"contain"
+          }}/>
+      </TouchableRipple>}
+      {screen == "Combatants Program" && <TouchableRipple
+        onPress={() => navigation.navigate('Home')}
+        style={{
+          height: 75,
+          backgroundColor: "#221f20",
+          borderColor: "#221f20",
+          justifyContent: "flex-end",
+          borderRadius: 0,
+          borderBottomWidth: 32,
+          borderBottomLeftRadius: 32,
+          borderBottomRightRadius: 32,
+        }}>
+        <Image source={require("./assets/RappelMasterClear.png")} style={{
+          marginLeft: 10,
+          marginRight: 10,
+          marginBottom: -20,
+          width: 100,
+          height: 45,
+          resizeMode:"contain"
+          }}/>
+      </TouchableRipple>}
     </Appbar.Header>
   );
 }  
@@ -327,7 +423,7 @@ function HomeScreen({ navigation, route }) {
                   titleVariant="titleLarge"
                   titleStyle={{color: "#221f20"}}
                   subtitleStyle={{color: "#221f20"}}
-                  subtitle="&quot;The Ten Toughest Days in the Army&quot;"
+                  subtitle="&quot;Gateway to the 101&quot;"
                   right={(props) => <Image source={require("./assets/AssaultBadgeClear.png")}
                     style={{
                       width: 60,
